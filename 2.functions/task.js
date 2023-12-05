@@ -26,8 +26,7 @@ function summElementsWorker(...arr) {
 	if (arr.length === 0) {
 		return 0;
 	}
-	let sum = arr.reduce((a, b) => a + b);
-	return sum;
+	return arr.reduce((a, b) => a + b);
 }
 
 function differenceMaxMinWorker(...arr) {
