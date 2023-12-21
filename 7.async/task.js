@@ -34,15 +34,11 @@ class AlarmClock {
     const hours = currentDate.getHours();
     if (hours < 10) {
       hours = "0" + hours;
-    } else {
-      hours = String(hours);
     }
 
-    const minutes = String(currentDate.getMinutes());
+    const minutes = currentDate.getMinutes();
     if (minutes < 10) {
       minutes = "0" + minutes;
-    } else {
-      hominutesurs = String(minutes);
     }
 
     return `${hours}:${minutes}`;
