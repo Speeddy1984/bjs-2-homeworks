@@ -1,7 +1,7 @@
 class AlarmClock {
   constructor() {
     this.alarmCollection = [];
-    this.intervalId = 0;
+    this.intervalId = null;
   }
 
   addClock(time, callback) {
@@ -44,7 +44,7 @@ class AlarmClock {
     } else {
       hominutesurs = String(minutes);
     }
-    
+
     return `${hours}:${minutes}`;
   }
 
