@@ -14,13 +14,12 @@ class AlarmClock {
     );
     if (isAlarmPresent) {
       console.warn("Уже присутствует звонок на это же время");
-    } else {
-      this.alarmCollection.push({
-        time,
-        callback,
-        canCall: true,
-      });
-    }
+    } 
+    this.alarmCollection.push({
+      time,
+      callback,
+      canCall: true,
+    });
   }
 
   removeClock(time) {
@@ -30,18 +29,10 @@ class AlarmClock {
   }
 
   getCurrentFormattedTime() {
-    const currentDate = new Date();
-    const hours = currentDate.getHours();
-    if (hours < 10) {
-      hours = "0" + hours;
-    }
-
-    const minutes = currentDate.getMinutes();
-    if (minutes < 10) {
-      minutes = "0" + minutes;
-    }
-
-    return `${hours}:${minutes}`;
+    return new Date().toLocaleTimeString("ru-Ru", {
+      hour: "2-digit",
+      minute: "2-digit",
+      });
   }
 
   start() {
